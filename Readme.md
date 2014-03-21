@@ -25,9 +25,11 @@ Before registering assets, you have to run this command first
 	php artisan assets:setup // from codesleeve/asset-pipeline command
 
 I have already provided this assets to the structure directories
+
 - Bootstrap
 - Angular JS
 - Font Awesome
+
 Or type this to know what have been provided by this package.
 
 	php artisan bootstrap:list
@@ -36,9 +38,7 @@ In some case, maybe you want to install bootstrap. It's simple, type this comman
 
 	php artisan bootstrap:install bootstrap
 
-To make sure bootstrap is installed, check `app/assets/javascripts/application.js` and the content is containing `//= require bootstrap` and `app/assets/stylesheets/application.css` containing `*= require bootstrap`. Or maybe you want to install Angular JS. Do this script
-
-	php artisan bootstrap:install angular
+To make sure bootstrap is installed, check `app/assets/javascripts/application.js` and the content is containing `//= require bootstrap` and `app/assets/stylesheets/application.css` containing `*= require bootstrap`. 
 
 That's it. Simple, isn't it?
 
