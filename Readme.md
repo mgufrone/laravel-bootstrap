@@ -21,7 +21,7 @@ Then, you need to run this command, so it will be automatically register bootstr
 	php artisan assets:setup // from codesleeve/asset-pipeline command
 	php artisan bootstrap:install 
 
-To make sure bootstrap is installed, check `app/assets/javascripts/application.js` and the content is containing `//require bootstrap` and `app/assets/stylesheets/application.css` containing `*= require bootstrap`.
+To make sure bootstrap is installed, check `app/assets/javascripts/application.js` and the content is containing `//= require bootstrap` and `app/assets/stylesheets/application.css` containing `*= require bootstrap`.
 
 ## Contributing
 
