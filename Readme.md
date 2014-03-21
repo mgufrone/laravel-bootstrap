@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This will make you easier to install Bootstrap Assets on your Laravel apps. This repository require [https://github.com/CodeSleeve/asset-pipeline](Asset Pipeline). We love simple, so i hope this package can get you an easy method to install bootstrap assets.
+This will make you easier to install Bootstrap Assets on your Laravel apps. This repository require [Asset Pipeline](https://github.com/CodeSleeve/asset-pipeline). We love simple, so i hope this package can get you an easy method to install bootstrap assets.
 
 ## How to install 
 
