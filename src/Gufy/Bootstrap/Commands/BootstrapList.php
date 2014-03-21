@@ -28,9 +28,11 @@ class BootstrapList extends Command {
 	public function fire()
 	{
 		$structure = __DIR__ . '/../../../../structure';
+		$this->info("Available Assets: ");
 		foreach(scandir($structure) as $dir)
 		{
-			$this->info($dir);
+			if($dir !='.' && $dir != '..')
+			$this->info("\t- ".$dir);
 		}
 		$this->info('To install asset, type php artisan bootstrap:install asset_name');
 	}

@@ -38,7 +38,7 @@ class BootstrapInstall extends Command {
 	public function fire()
 	{
 		//
-		$asset = $this->argument('asset');
+		$asset = $this->argument('assets');
 		$structure = __DIR__ . '/../../../../structure/'.$asset;
 		if(!file_exists($structure))
 			$this->error('Asset '.$asset.' not found. ');
