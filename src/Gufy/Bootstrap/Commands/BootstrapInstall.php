@@ -49,12 +49,10 @@ class BootstrapInstall extends Command {
 
         $this->line('');
         $this->line('Rewriting application.js');
-        $this->line('         - Mochamad Gufron');
         $this->writeJs($base);
 
         $this->line('');
         $this->line('Rewriting application.css');
-        $this->line('         - Mochamad Gufron');
         $this->writeCss($base);
 
         $this->line('');
@@ -106,9 +104,9 @@ class BootstrapInstall extends Command {
 
 		foreach($data as &$string)
 		{
-			if($string == '*= require_tree .')
+			if(trim($string) == '*= require_tree .')
 			{
-				$string = "*= require bootstrap\n".$string;
+				$string = " *= require bootstrap \n".$string;
 			}	
 		}
 
