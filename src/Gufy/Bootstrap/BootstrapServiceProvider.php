@@ -30,7 +30,7 @@ class BootstrapServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//
-		Artisan::add(new BootstrapInstall);
+		\Artisan::add(new BootstrapInstall);
 	}
 
 	/**
