@@ -18,10 +18,37 @@ Once you've done updating your composer.json, Add this script to your `app/confi
 
 Then, you need to run this command, so it will be automatically register bootstrap assets on javascript and css files. Make sure you only run this once. 
 
-	php artisan assets:setup // from codesleeve/asset-pipeline command
-	php artisan bootstrap:install 
+## Registering Assets
 
-To make sure bootstrap is installed, check `app/assets/javascripts/application.js` and the content is containing `//= require bootstrap` and `app/assets/stylesheets/application.css` containing `*= require bootstrap`.
+Before registering assets, you have to run this command first
+
+	php artisan assets:setup // from codesleeve/asset-pipeline command
+
+I have already provided this assets to the structure directories
+- Bootstrap
+- Angular JS
+- Font Awesome
+Or type this to know what have been provided by this package.
+
+	php artisan bootstrap:list
+
+In some case, maybe you want to install bootstrap. It's simple, type this command to install bootstrap asset.
+
+	php artisan bootstrap:install bootstrap
+
+To make sure bootstrap is installed, check `app/assets/javascripts/application.js` and the content is containing `//= require bootstrap` and `app/assets/stylesheets/application.css` containing `*= require bootstrap`. Or maybe you want to install Angular JS. Do this script
+
+	php artisan bootstrap:install angular
+
+That's it. Simple, isn't it?
+
+## Changelog
+
+### v1.0.0
+- Add angularjs
+- add bootstrap
+- add font-awesome
+- Support list of available asset that can be installed
 
 ## Contributing
 
