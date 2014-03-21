@@ -1,6 +1,7 @@
 <?php namespace Gufy\Bootstrap;
 
 use Illuminate\Support\ServiceProvider;
+use Gufy\Bootstrap\Commands\BootstrapInstall;
 
 class BootstrapServiceProvider extends ServiceProvider {
 
