@@ -1,7 +1,6 @@
 <?php namespace Gufy\Bootstrap;
 
 use Illuminate\Support\ServiceProvider;
-use Gufy\Bootstrap\Commands\BootstrapInstall;
 
 class BootstrapServiceProvider extends ServiceProvider {
 
@@ -30,7 +29,10 @@ class BootstrapServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//
-		\Artisan::add(new BootstrapInstall);
+		$this->app['bootstrap.install'] = $this->app->share(function($app){
+			return new Commands\BootstrapInstall;
+		})
+		$this->command('bootstrap.install');
 	}
 
 	/**
