@@ -32,7 +32,7 @@ class BootstrapServiceProvider extends ServiceProvider {
 		$this->app['bootstrap.install'] = $this->app->share(function($app){
 			return new Commands\BootstrapInstall;
 		});
-		$this->command('bootstrap.install');
+		$this->commands('bootstrap.install');
 	}
 
 	/**
