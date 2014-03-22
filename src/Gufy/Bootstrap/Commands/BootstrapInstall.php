@@ -50,14 +50,14 @@ class BootstrapInstall extends Command {
 
         $this->xcopy(realpath($structure), realpath($base));
 
-        if(file_exists($structure.'/provider/javascripts'))
+        if(file_exists($structure.'/provider/assets/javascripts'))
         {
 	        $this->line('');
 	        $this->line('Registering '.$asset.' to application.js');
 	        $this->writeJs($asset, $base);
         }
 
-        if(file_exists($structure.'/provider/stylesheets'))
+        if(file_exists($structure.'/provider/assets/stylesheets'))
         {
 	        $this->line('');
 	        $this->line('Registering '.$asset.' to application.css');
