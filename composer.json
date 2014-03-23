@@ -20,6 +20,5 @@
         "psr-0": {
             "Gufy\\Bootstrap\\": "src/"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }
