@@ -21,5 +21,5 @@
             "Gufy\\Bootstrap\\": "src/"
         }
     },
-	"minimum-stability": "stable"
+	"minimum-stability": "dev"
 }
