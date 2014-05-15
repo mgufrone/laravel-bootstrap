@@ -95,9 +95,11 @@ class BootstrapUpdate extends Command {
 
 	private function massUpdate()
 	{
-		$this->line("Let me get what you're already installed");
+		$this->line("Let me help you to find out what assets you're already installed on your apps");
 		$structure = __DIR__ . '/../../../../structure/';
 		$provider_list = array();
+        $base_path = base_path();
+        $packages = array();
 
 		foreach(scandir($structure) as $dir)
 			if($dir != '.' && $dir != '..')
@@ -111,7 +113,7 @@ class BootstrapUpdate extends Command {
 
 		foreach($data as $line)
 		{
-			if(in_array($asset = str_replace("//= require ", "", $line), $provider_list))
+			if(in_array($asset = trim(str_replace("//= require ", "", $line)), $provider_list))
 			{
 				$packages[] = $asset;
 			}
@@ -125,16 +127,23 @@ class BootstrapUpdate extends Command {
 
 		foreach($data as $line)
 		{
-			if(in_array($asset = str_replace(" *= require ", "", $line), $provider_list))
+			if(in_array($asset = trim(str_replace(" *= require ", "", $line)), $provider_list))
 			{
 				$packages[] = $asset;
 			}
+		}
+		
+		$packages = array_unique($packages);
+		if(empty($packages))
+		{
+			$this->info('No package found. Ignore updating');
+			return;
 		}
 
 		$this->line("Found. Updating ".implode(",", $packages));
 		foreach($packages as $package)
 		{
-			$this->call('bootstrap:update',array('assets'=>$package));
+			\Artisan::call('bootstrap:update',array('assets'=>$package));
 		}
 
 		$this->line('All update is doing fine. Happy Coding');
