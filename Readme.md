@@ -29,6 +29,8 @@ I have already provided this assets to the structure directories
 - Bootstrap
 - Angular JS
 - Font Awesome
+- Fancybox
+- Datatables
 
 Or type this to know what have been provided by this package.
 
@@ -44,11 +46,7 @@ That's it. Simple, isn't it?
 
 ## Changelog
 
-### v1.0.0
-- Add angularjs
-- add bootstrap
-- add font-awesome
-- Support list of available asset that can be installed
+See [Changelog](Changelog.md)
 
 ## Contributing
 
