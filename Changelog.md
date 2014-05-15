@@ -6,6 +6,8 @@
 - update bootstrap to latest version
 - update font-awesome to latest version
 - update angularjs to latest version
+- Add Knob JS
+- Add Update command to replace older asset files
 
 ## v1.0.1
 - add fancybox
