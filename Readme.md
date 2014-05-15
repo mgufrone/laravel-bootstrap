@@ -42,6 +42,16 @@ In some case, maybe you want to install bootstrap. It's simple, type this comman
 
 To make sure bootstrap is installed, check `app/assets/javascripts/application.js` and the content is containing `//= require bootstrap` and `app/assets/stylesheets/application.css` containing `*= require bootstrap`. 
 
+## Updating Assets (new)
+
+This feature available at v1.0.2. Well, since we have install feature, we will also need to update all of it. To update your assets, it's pretty simple. just type this
+
+	php artisan bootstrap:update
+
+Or, if you want to update specific asset only, you can do this
+
+	php artisan bootstrap:update angular
+
 That's it. Simple, isn't it?
 
 ## Changelog
